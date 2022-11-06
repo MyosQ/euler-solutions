@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #define SIZE 1000
 
+int addTwo(char* str1, char* str2, char* sum);
+
 int main(){
    unsigned int a, count = 0;
    char *temp, *numerator, *denominator;
