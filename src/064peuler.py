@@ -1,7 +1,11 @@
-def get_continued_fraction_sqrt(N, verbose=False):
+def get_continued_fraction_sqrt(N, verbose=False) -> tuple:
     """Return the continued fraction representation of sqrt(n)
     Also, the period is returned.
     """
+    if N**0.5 % 1 == 0:
+        return None, None
+
+    # sqrt(N) = a0 + 1/(a1 + 1/(a2 + 1/(a3 + ...)))    
     a = a0 = int(N**0.5)
     m = -a
     d = 1
